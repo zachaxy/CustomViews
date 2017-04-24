@@ -81,6 +81,9 @@ public class UnReadMsgView extends RadioButton {
         mTextPaint.setAntiAlias(true);
 
         a.recycle();
+
+        //必须设置这一句,否则可能会出现点击,设置的selector无效,当然如果为其设置点击事件,那么会自动改为可点击的
+        setClickable(true);
     }
 
     @Override
